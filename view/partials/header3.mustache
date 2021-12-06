@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-teal.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/public/style.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<body>
+
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-animate-left w3-card" id="mySidebar2">
+  <video autoplay loop>
+    <source src="/public/estrellas.mp4">
+  </video>
+  <h3>Gaucho Rocket</h3>
+  <a class=" w3-button w3-hide-large w3-large" href="javascript:void(0)" onclick="w3_close()">Close <i class="fa fa-remove"></i></a>
+  
+  <div id="myDIV">
+    <button id="botonmenu" onclick="location.href='#'" class="w3-bar-item btn neon2 ">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>Home</button> 
+    <button onclick="location.href='/Perfil'" class="w3-bar-item btn  neon2" >
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>Perfil</button>
+    <button onclick="location.href='/TurnoMedico'" class="w3-bar-item btn neon2"> 
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>Turno Medico</button>
+    <button onclick="location.href='/Vuelo'" class="w3-bar-item btn neon2">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>Vuelos</button>
+    <button onclick="location.href='/Reserva'" class="w3-bar-item btn neon2">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>Reservas</button>
+    <button onclick="location.href='/BuscarVuelo'" class="w3-bar-item btn  neon2" >
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>Buscar Vuelos</button>
+   
+  </div>
+
+  {{#tipo_role}}
+  <div>
+    <a class="w3-bar-item w3-button" href="/Reporte">Reporte estadistico</a>
+  </div>
+  {{/tipo_role}}
+</nav>
+
+
+<header class="w3-container" id="mySidebar" >
+  <video autoplay loop>
+    <source src="/public/estrellas.mp4">
+  </video>  
+	<a class="w3-bar-item w3-btn w3-red w3-round-large w3-right w3-padding-large " href="/CerrarSesion/cerrarSesion" style="width:auto;">Cerrar Sesion</a>
+  {{#nombre}}
+    <p><i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i>{{nombre}}</p>
+  {{/nombre}}
+</header>

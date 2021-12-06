@@ -1,0 +1,264 @@
+{{> header}}
+
+<body class="w3-content w3-black" style="max-width:auto;">
+
+
+<div class="w3-display-container w3-center">
+  <button class="w3-button w3-block w3-green w3-hide-large w3-hide-medium" onclick="document.getElementById('Suscribirse').style.display='block'">Suscribirse <i class="fa fa-android"></i> <i class="fa fa-apple"></i> <i class="fa fa-windows"></i></button>
+  <div class="mySlides w3-animate-opacity">
+    <img class="w3-image" src="/public/gauchorocket.jpg" alt="Image 1" style="min-width:500px" width="1500" height="1000">
+    <div class="w3-display-left w3-padding w3-hide-small" style="width:45%">
+      <div class="w3-black w3-opacity w3-hover-opacity-off w3-padding-large w3-round-large">
+        <h2></i>Buscar Vuelos</h2>
+      </div>
+      <div class="w3-container w3-white w3-padding-16">
+        <form action="verVuelo" method="post">
+          <div class="w3-row-padding" style="margin:8px -16px;">
+            <div class="w3-half w3-margin-bottom">
+              <label for="origen">Seleccionar Origen</label>
+                <select  class="w3-input w3-border" id="origen" name="origen">
+                  <option value="1">Buenos Aires</option>
+                  <option value="2">Ankara</option>
+                </select>
+            </div>
+            <div class="w3-half w3-margin-bottom">           
+              <label for="destino">Destino</label>
+                <select class="w3-input w3-border" id="destino" name="destino">
+                  <option value="1">Estación Espacial Internacional</option>
+                  <option value="2">OrbiterHotel</option>
+                  <option value="3">Luna</option>
+                  <option value="4">Marte</option>
+                  <option value="5">Ganimedes</option>
+                  <option value="6">Europa</option>
+                  <option value="7">Io</option>
+                  <option value="8">Encedalo</option>
+                  <option value="9">Titán</option>
+                </select>
+            </div>
+          </div>
+          <div class="w3-row-padding" style="margin:0 -16px;">
+            <div class="w3-half w3-margin-bottom">
+              <label><i class="fa fa-calendar-o"></i> Fecha Partida</label>
+                <input class="w3-input w3-border" type="date" id="partida" name="partida" placeholder="DD MM YYYY">
+            </div>
+            <div class="w3-half">
+              <label><i class="fa fa-calendar-o"></i> Fecha Regreso</label>
+                  <input class="w3-input w3-border" type="date" id="regreso" name="regreso" placeholder="DD MM YYYY">
+            </div>
+          </div>
+            <button class="w3-button w3-dark-grey" type="submit"><i class="fa fa-search w3-margin-right" ></i></i> Buscar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="mySlides w3-animate-opacity">
+    <img class="w3-image" src="/public/asientos.jpg" alt="Image 2" style="min-width:500px" width="1500" height="1000">
+      <div class="w3-display-left w3-padding w3-hide-small" style="width:45%">
+      
+	  <div class="w3-black w3-opacity w3-hover-opacity-off w3-padding-large w3-round-large">
+      <h2></i>Buscar Vuelos</h2>
+    </div>
+	<div class="w3-container w3-white w3-padding-16">
+    <form action="/buscarVuelo/procesarVuelo" method="post">
+      <div class="w3-row-padding" style="margin:8px -16px;">
+        <div class="w3-half w3-margin-bottom">
+          
+          <label for="origen">Seleccionar Origen</label>
+            <select  class="w3-input w3-border" id="origen" name="origen">
+              <option value="1">Buenos Aires</option>
+              <option value="2">Ankara</option>
+            </select>
+                </div>
+        <div class="w3-half w3-margin-bottom">
+          
+          <label for="destino">Destino</label>
+          <select class="w3-input w3-border" id="destino" name="destino">
+            <option value="1">Estación Espacial Internacional</option>
+            <option value="2">OrbiterHotel</option>
+            <option value="3">Luna</option>
+            <option value="4">Marte</option>
+            <option value="5">Ganimedes</option>
+            <option value="6">Europa</option>
+            <option value="7">Io</option>
+            <option value="8">Encedalo</option>
+            <option value="9">Titán</option>
+          </select>
+        </div>
+        
+        
+      </div>
+      
+    <div class="w3-row-padding" style="margin:0 -16px;">
+        <div class="w3-half w3-margin-bottom">
+          <label><i class="fa fa-calendar-o"></i> Fecha Partida</label>
+          <input class="w3-input w3-border" type="date" id="partida" name="partida" placeholder="DD MM YYYY">
+        </div>
+        <div class="w3-half">
+          <label><i class="fa fa-calendar-o"></i> Fecha Regreso</label>
+          <input class="w3-input w3-border" type="date" id="regreso" name="regreso" placeholder="DD MM YYYY">
+        </div>
+      </div>
+
+      <button class="w3-button w3-dark-grey" type="submit"><i class="fa fa-search w3-margin-right"></i> Buscar</button>
+    </form>
+	  </div>
+    </div>
+  </div>
+  <div class="mySlides w3-animate-opacity">
+    <img class="w3-image" src="/public/vista.jpg" alt="Image 3" style="min-width:500px" width="1500" height="1000">
+      <div class="w3-display-left w3-padding w3-hide-small" style="width:45%">
+      
+	  <div class="w3-black w3-opacity w3-hover-opacity-off w3-padding-large w3-round-large">
+      <h2></i>Buscar Vuelos</h2>
+    </div>
+	<div class="w3-container w3-white w3-padding-16">
+		<form action="/buscarVuelo/procesarVuelo" method="post">
+      <div class="w3-row-padding" style="margin:8px -16px;">
+        <div class="w3-half w3-margin-bottom">
+          
+          <label for="origen">Seleccionar Origen</label>
+            <select  class="w3-input w3-border" id="origen" name="origen">
+              <option value="1">Buenos Aires</option>
+              <option value="2">Ankara</option>
+            </select>
+                </div>
+        <div class="w3-half w3-margin-bottom">
+          
+          <label for="destino">Destino</label>
+          <select class="w3-input w3-border" id="destino" name="destino">
+            <option value="1">Estación Espacial Internacional</option>
+            <option value="2">OrbiterHotel</option>
+            <option value="3">Luna</option>
+            <option value="4">Marte</option>
+            <option value="5">Ganimedes</option>
+            <option value="6">Europa</option>
+            <option value="7">Io</option>
+            <option value="8">Encedalo</option>
+            <option value="9">Titán</option>
+          </select>
+        </div>
+        
+        
+      </div>
+      
+    <div class="w3-row-padding" style="margin:0 -16px;">
+        <div class="w3-half w3-margin-bottom">
+          <label><i class="fa fa-calendar-o"></i> Fecha Partida</label>
+          <input class="w3-input w3-border" type="date" id="partida" name="partida" placeholder="DD MM YYYY">
+        </div>
+        <div class="w3-half">
+          <label><i class="fa fa-calendar-o"></i> Fecha Regreso</label>
+          <input class="w3-input w3-border" type="date" id="regreso" name="regreso" placeholder="DD MM YYYY">
+        </div>
+      </div>
+
+      <button class="w3-button w3-dark-grey" type="submit"><i class="fa fa-search w3-margin-right"></i> Buscar</button>
+    </form>
+	  </div>
+    </div>
+  </div>
+  <a class="w3-button w3-black w3-display-right w3-margin-right w3-round w3-hide-small w3-hover-light-grey" onclick="plusDivs(1)">Mostrar Tour <i class="fa fa-angle-right"></i></a>
+</div>
+
+
+<div id="Suscribirse" class="w3-modal w3-animate-opacity">
+  <div class="w3-modal-content" style="padding:32px">
+    <div class="w3-container w3-white">
+      <i onclick="document.getElementById('Suscribirse').style.display='none'" class="fa fa-remove w3-xlarge w3-button w3-transparent w3-right w3-xlarge"></i>
+      <h2 class="w3-wide">Unete a Gaucho Rocket</h2>
+      <p>No es solo un viaje tradicional. Es una forma de viajar distinta.</p>
+      <i class="fa fa-android w3-large"></i> <i class="fa fa-apple w3-large"></i> <i class="fa fa-windows w3-large"></i>
+      <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail"></p>
+      <button type="button" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom" onclick="document.getElementById('Suscribirse').style.display='none'">Suscribirse</button>
+    </div>
+  </div>
+</div>
+
+
+<div class="w3-padding-64 w3-light-grey">
+  <div class="w3-row-padding">
+    <div class="w3-col l4 m6">
+      <img class="w3-image w3-round-large w3-hide-small w3-grayscale" src="/public/globo.jpg" alt="App" width="335" height="471">
+    </div>
+    <div class="w3-col l8 m6">
+      <h1 class="w3-jumbo"><b>Viajar al espacio en globo será posible en 2024</b></h1>
+      <h1 class="w3-xxxlarge w3-text-red"><b>Lo harias.?</b></h1>
+      <p><span class="w3-xlarge">Viajar al espacio es el sueño de muchas personas.</span> pero por el momento solo los astronautas han podido hacerlo realidad. Muy pronto, aquellos que puedan permitírselo también tendrán
+        la posibilidad de cumplir su sueño gracias al turismo espacial.</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="w3-container w3-green">
+  <h2>Horario - Vuelos </h2> 
+
+</div>
+
+
+
+  
+  
+<div class="w3-container w3-padding-16" id="seccion1">
+
+    
+    
+    <div style="overflow-x: auto;">
+      
+      <table class="w3-table-all w3-text-black">
+        <tr>
+          <th>Horario</th>
+          <th>Vuelo</th>
+          <th>Origen</th>
+          <th>Destino</th>          
+          <th>Estado</th>
+          
+          
+          
+         </tr>
+         {{#vuelo}}
+        <tr>
+          <td>{{horario}}</td>
+          <td>{{CodigoVuelo}}</td>
+          <td>{{origen}}</td>
+          <td>{{destino}}</td>          
+          <td>{{estado}}</td>
+		  
+          
+
+          
+         
+        </tr>
+        {{/vuelo}}
+        
+      </table>
+    </div>
+  </div>
+
+{{> footer}}
+
+<script>
+// Slideshow
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+function vuelo(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+
+

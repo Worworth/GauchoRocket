@@ -1,0 +1,152 @@
+
+{{> header3}}
+
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+
+<div class="w3-main" style="margin-left:250px;">
+
+
+
+<header class="w3-container" id="mySidebar" >
+<a class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="My Account">
+    
+	<div class="w3-round w3-white w3-main">
+	
+        <div class="w3-container">
+         
+		<a class="w3-bar-item w3-btn w3-red w3-round-large w3-right w3-padding-large " href="/cerrarSesion" style="width:auto;">Cerrar Sesion</a>
+         <p class="w3-center"><img src="https://www.w3schools.com/w3images/avatar3.png" class="w3-circle" style="height:106px;width:106px" alt="Avatar"></p>
+         <hr>
+         <p><i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i> Alumno</p>
+         <p><i class="fa fa-home fa-fw w3-margin-right w3-text-theme"></i> Buenos Aires, IC</p>
+         <p><i class="fa fa-birthday-cake fa-fw w3-margin-right w3-text-theme"></i> 22 de Junio, 1992</p>
+        </div>
+      </div>
+
+      <br>
+  </a>
+
+
+</header>
+
+
+
+
+
+
+<div class="w3-container" style="padding:32px">
+  
+<h2>Únete a más de 1 millón de viajeros de todo el mundo que utilizan <b>Gaucho Rocket</b> para obtener más y mejores viajes.</h2>
+
+
+
+<ul class="w3-leftbar w3-theme-border" style="list-style:none">
+ <li>No es solo trabajo. Es una forma de trabajar juntos.</li>
+ <li>Crea un tablero, listas y tarjetas de Trello para empezar, y personalízalos y expándelos conforme el trabajo en equipo vaya a más.</li>
+ <li>Gestiona proyectos, organiza tareas y fomenta un trabajo conjunto y colaborativo desde un mismo lugar.</li>
+
+</ul>
+
+
+
+<br>
+<img src="/public/gauchorocket.jpg" style="width:100%" alt="Responsive">
+
+<hr>
+<h2>W3.CSS is Free</h2>
+<p>W3.CSS is free to use. No license is necessary.</p>
+
+<hr>
+<h2>Easy to Use</h2>
+<div class="w3-container w3-sand w3-leftbar">
+<p><i>Make it as simple as possible, but not simpler.</i><br>
+Albert Einstein</p>
+</div>
+
+<hr>
+<h2>W3.CSS Web Site Templates</h2>
+
+<p>We have created some responsive W3CSS templates for you to use.</p>
+<p>You are free to modify, save, share, use or do whatever you want with them:</p>
+
+
+<div class="w3-panel w3-light-grey w3-padding-16 w3-card">
+<h3 class="w3-center">Band Template</h3>
+<div class="w3-content" style="max-width:800px">
+<a href="tryw3css_templates_band.htm" target="_blank"  title="Band Demo"><img src="/public/cohete.jpg" style="width:98%;margin:20px 0" alt="Band Template"></a><br>
+<div class="w3-row">
+  <div class="w3-col m6">
+    <a href="tryw3css_templates_band.htm" target="_blank" class="w3-button w3-padding-large w3-dark-grey" style="width:98.5%">Demo</a>
+  </div>
+  <div class="w3-col m6">
+    <a href="w3css_templates.asp" class="w3-button w3-padding-large w3-dark-grey" style="width:98.5%">More Templates »</a>
+  </div>
+</div>
+</div>
+</div>
+
+<div class="w3-container w3-padding-16 w3-card" style="background-color:#eee">
+<h3 class="w3-center">Blog Template</h3>
+<div class="w3-content" style="max-width:800px">
+<img src="/public/gauchorocket.jpg" style="width:98%;margin:20px 0" alt="Blog Template"><br>
+<div class="w3-row">
+  <div class="w3-col m6">
+    <a href="tryw3css_templates_blog.htm" target="_blank" class="w3-button w3-padding-large w3-dark-grey" style="width:98.5%">Demo</a>
+  </div>
+  <div class="w3-col m6">
+    <a href="w3css_templates.asp" class="w3-button w3-padding-large w3-dark-grey" style="width:98.5%">More Templates »</a>
+  </div>
+</div>
+</div>
+</div>
+
+</div>
+
+<footer class="w3-container w3-theme" style="padding:32px">
+  <p>Footer information goes here</p>
+</footer>
+     
+</div>
+
+<script>
+// Open and close the sidebar on medium and small screens
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Change style of top container on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    document.getElementById("myTop").classList.add("w3-card-4", "w3-animate-opacity");
+    document.getElementById("myIntro").classList.add("w3-show-inline-block");
+  } else {
+    document.getElementById("myIntro").classList.remove("w3-show-inline-block");
+    document.getElementById("myTop").classList.remove("w3-card-4", "w3-animate-opacity");
+  }
+}
+
+// Accordions
+function myAccordion(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className += " w3-theme";
+  } else { 
+    x.className = x.className.replace("w3-show", "");
+    x.previousElementSibling.className = 
+    x.previousElementSibling.className.replace(" w3-theme", "");
+  }
+}
+</script>
+     
+</body>
+</html> 
+
+{{> footer}}

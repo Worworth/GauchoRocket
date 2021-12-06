@@ -1,0 +1,38 @@
+
+{{> header3}}
+<div class="po">
+  <div class="w3-container w3-green">
+    <h2>Horario - Vuelos Disponibles </h2> 
+
+  </div>
+    
+  <div class="w3-container w3-padding-16">
+    <div style="overflow-x: auto;">
+      <table class="w3-table-all">
+        <tr>
+          <th>Horario</th>
+          <th>Fecha Partida</th>
+          <th>Fecha Regreso</th>
+          <th>Vuelo</th>
+          <th>Origen</th>
+          <th>Destino</th>          
+          <th>Estado</th>
+          <th>Accion</th> 
+        </tr>
+        {{#vuelo}} 
+        <tr>
+          <td>{{horario}}</td>
+          <td>{{fechaPartida}}</td>
+          <td>{{fechaRegreso}}</td>
+            <td>{{CodigoVuelo}}</td>
+            <td>{{origen}}</td>
+            <td>{{destino}}</td>          
+            <td>{{estado}}</td>
+            <td><a href="/buscarVuelo/detalleVuelo/id={{CodigoVuelo}}">Agregar</a></td>   
+        </tr>
+          {{/vuelo}}
+      </table>
+    </div>
+  </div>
+</div>
+{{> footer}}

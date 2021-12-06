@@ -1,0 +1,65 @@
+{{> header3}}
+<div class="w3-main vuelos">
+  <div class="w3-container vuelostitulo">
+    <h2>Horario - Vuelos </h2> 
+
+  </div>
+  <div class="w3-container w3-padding-16">
+    <div class="divtabla">
+      <table class="w3-table ">
+        <tr>
+          <th>Horario</th>
+          <th>Vuelo</th>
+          <th>Origen</th>
+          <th>Destino</th>
+          <th>Estado</th>
+          <th></th>
+        </tr>
+        {{#vuelo}}
+        <tr>
+          <td>{{horario}}</td>
+          <td>{{CodigoVuelo}}</td>
+          <td>{{origen}}</td>
+          <td>{{destino}}</td>
+          <td>{{estado}}</td>
+          <td><a href="/buscarVuelo/detalleVuelo/id={{CodigoVuelo}}">Reservar</a></td>
+        </tr>
+        {{/vuelo}}
+      </table>
+    </div>
+  </div>
+  <div class="w3-padding-64 w3-center">
+    <h1 class="w3-jumbo"><b>TOURS</b></h1>
+    <p class="w3-large">Elegi el tour deseado</p>
+    <div class="w3-row-padding lop">
+      <div class="w3-half w3-section">
+        <ul class="w3-ul w3-card">
+          <li class="w3-dark-grey w3-xlarge w3-padding-32">Salida Buenos Aires</li>
+          <li class="w3-padding-16"><b>Recorre</b> Todos los destinos</li>
+          <li class="w3-padding-16"><b> 21 días</b> de Experiencia</li>
+          <li class="w3-padding-16">
+            <h2 ><b>$ 99</b></h2>
+          </li>
+          <li class="w3-light-grey w3-padding-24">
+            <button class="w3-button w3-black w3-padding-large" ><a href="/buscarVuelo/detalleVuelo/id=4">Reservar</a></button>
+            </li>
+        </ul>
+      </div>
+      <div class="w3-half w3-section">
+        <ul class="w3-ul w3-card">
+          <li class="w3-red w3-xlarge w3-padding-32">Salida Ankara</li>
+          <li class="w3-padding-16"><b>Recorre</b> Todos los destinos</li>
+          <li class="w3-padding-16"><b> 21 días</b> de Experiencia</li>
+          <li class="w3-padding-16">
+            <h2 ><b>$ 99</b></h2>
+          </li>
+          <li class="w3-light-grey w3-padding-24">
+            <button class="w3-button w3-black w3-padding-large" ><a href="/buscarVuelo/detalleVuelo/id=5">Reservar</a></button>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <br>
+  </div>
+</div>
+{{> footer}}

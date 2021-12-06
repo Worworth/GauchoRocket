@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Gaucho Rocket</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="/public/styleheader.css">
+<body class="login">
+
+<!-- Navbar -->
+
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card popo">
+    <a class="w3-bar-item pepe" href="/login"><b>Gaucho</b> Rocket</a>
+    <img class="logoheader" src="/public/logogauchorocket.png" alt="Gauchorocket logo">
+    <div class="w3-right w3-hide-small">
+       <a class="w3-bar-item w3-btn w3-green w3-right w3-padding-large " href="/login" style="width:auto;">Iniciar Sesion</a>
+       <a class="w3-bar-item w3-btn w3-right w3-padding-large pepe btn-1" onclick="document.getElementById('id01').style.display='block'" >Registrarse</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
+  <!--<img class="w3-image" src="/public/gauchorocket.jpg" alt="Architecture" width="1500" height="600">-->
+  <div class="w3-display-middle w3-margin-top w3-center">
+    <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>Gaucho</b></span> <span class="w3-hide-small w3-text-light-grey">Rocket</span></h1>
+  </div>
+</header>
+
+
+<div id="id01" class="modal w3-text-black">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content" action="login/procesarLogin" method="POST">
+    <div class="container">
+      <h1>Registro</h1>
+      <p>Por favor, rellene este formulario para crear una cuenta.</p>
+      <hr>
+	  <label for="nombre"><b>Nombre</b></label>
+      <input type="text" placeholder="Ingresar Nombre" name="nombre" required>
+	  <label for="apellido"><b>Apellido</b></label>
+      <input type="text" placeholder="Ingresar Apellido" name="apellido" required>
+	  <label for="telefono"><b>Telefono</b></label>
+      <input type="text" placeholder="Ingresar Telefono" name="telefono" required>
+	  <label for="usuario"><b>Usuario</b></label>
+      <input type="text" placeholder="Ingresar Usuario" name="usuario" required>
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Ingresar Email" name="email" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Ingresar Password" name="password" required>
+
+      <label for="psw-repeat"><b>Repeat Password</b></label>
+      <input type="password" placeholder="Repetir Password" name="password-repeat" required>
+      
+      <label>
+        <input type="checkbox" checked="checked" style="margin-bottom:15px"> Recuérdame 
+      </label>
+
+      <p>Al crear una cuenta, usted acepta <a href="#" style="color:dodgerblue"> nuestros Términos y privacidad</a>.</p>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancelar</button>
+        <button type="submit" class="signupbtn" name="guardar">Registrar</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>

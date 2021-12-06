@@ -1,0 +1,63 @@
+{{> header3}}
+<div class=" w3-main gop">
+	<div class="w3-container w3-center">
+		<h2 class="w3-wide tituloreserva">Lista de Reservas</h2>
+	</div>
+	<br>
+	<div class="w3-row reserva">
+		<table class="w3-table tablareserva">
+			<tr>
+				<th>Nro</th>
+				<th>Nombre</th>
+				<th>Apellido</th>
+				<th>Origen</th>
+				<th>Destino</th>
+				<th>Vuelo</th>
+				<th style="white-space:nowrap">Codigo</th>
+				<th>Comprobante</th>
+				<th>Boarding Pass</th>
+				<th>Cancelacion</th>
+				<th>Estado de Reserva</th>
+				<th>Pago</th>
+			</tr>
+			{{#reserva}}
+			<tr>
+				<td>{{numero_reserva}} </td>
+				<td>{{nombre}}</td>
+				<td>{{apellido}}</td>
+				<td>{{origen}}</td>
+				<td>{{destino}}</td>
+				<td>{{numero_vuelo}}</td>
+				<td>{{codigo_reserva}}</td>
+				<td><a class="w3-button w3-yellow w3-round-xlarge" href="/reserva/generarComprobante?id={{numero_reserva}}"target="_blank">Comprobante</a></td>
+				<td><a class="w3-button w3-yellow w3-round-xlarge" href="/reserva/generarBoarding?id={{numero_reserva}}" target="_blank">BOARDING PASS</a></td>
+				<td><button class="w3-button w3-red" onclick="document.getElementById('cancelarReserva').style.display='block'">Cancelar</td>	
+				<td>{{estado}}</td>	
+				<td><a class="w3-button w3-yellow w3-round-xlarge" href="/pagar/pagarReserva?id={{numero_reserva}}"target="_blank">Metodo de Pago</a></td>
+			</tr>
+			{{/reserva}}
+		</table>
+	</div>
+	<!--/div>
+	</div-->
+	<div id="cancelarReserva" class="modal">
+		<span onclick="document.getElementById('cancelarReserva').style.display='none'" class="close"
+			title="Close Modal">&times;</span>
+		<h3>¿Esta seguro quiere cancelar la reserva?</h3>
+		<p>Esta accion no se puede deshacer y no se le devolvera el dinero.</br>
+			Ante cualquier duda o reclamo no dude en consultar a traves de nuestro correo o en nuestra pagina de reclamos
+			<a>aqui</a>
+		</p>
+		<form action="/Reserva/cancelarReserva" method="POST">
+			<label>Inserte su codigo de reserva:
+				<input type="text" name="codigo_reserva">
+			</label>
+			<input type="submit" class="signupbtn w3-green w3-hover-teal" value="si" name="guardar">
+		</form>
+		<button onclick="document.getElementById('cancelarReserva').style.display='none'"
+			class="cancelbtn w3-button w3-red  w3-hover-pink">cerrar</button>
+
+	</div>
+
+</div>
+{{> footer}}

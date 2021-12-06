@@ -1,0 +1,58 @@
+{{> header3}}
+<div class="po">
+  <div class="w3-text-black w3-pale-green w3-bottombar w3-border-green w3-border poi">
+    <p>FAVOR DE CONTROLAR TODOS LOS DATOS DE LA RESERVA .</p>
+  </div>
+  {{#vuelo}}
+  <h2 class="w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Vuelo
+    Numero: {{numero_vuelo}}</h2>
+  <div class="w3-container">
+    <h4 class="w3-text-white">Salida: <b name=> {{origen}}</b> / Destino: <b> {{destino}}</b></h4>
+    <h4 class="fechadetalle"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Fecha Partida: <span
+        class="w3-tag w3-teal w3-round">{{fecha_partida}}</span> / Fecha Regreso: <span
+        class="w3-tag w3-teal w3-round">{{fecha_regreso}}</span>/ Dia: <span
+        class="w3-tag w3-teal w3-round">{{dia}}</span>/ Horario: <span
+        class="w3-tag w3-teal w3-round">{{hora}}</span></h4>
+    <p> Para finalizar con el proceso debés abonar tu pasaje on line con tarjeta de crédito, sino tu reserva será
+      cancelada. Por cualquier consulta durante el proceso de cambio te pedimos que por favor te comuniques con nuestro
+      Call Center 800-610-200.</p>
+
+  </div>
+  {{/vuelo}}
+
+  <div class="w3-container datallereserva ">
+    <form action="/Reserva/cargarReserva" method="post">
+      <div class="w3-column">
+        <label>Tipo de Servicio</label>
+        <select  class="plo" type="text" name="servicio">
+          <option value="1">Standar</option>
+          <option value="2">gourmet</option>
+          <option value="3">span</option>
+        </select>
+        <br>
+        <br>
+        <div class="w3-half plo2">
+          <label>Seleccione la Cabina:</label>
+          <br>
+            {{#asientos}}
+            <input class="w3-radio" type="radio" name="cabina" value="{{id}}" checked="" {{disponibilidad}}>
+            <label>{{nombre}}</label>
+            {{/asientos}}
+            <br>
+            <br>
+          <input type="submit" class="w3-button w3-red w3-round-xlarge" value="Reservar">
+        </div>
+      </div>
+
+      {{#vuelo}}
+      <input id="cambio" class="w3-input" type="text" name="origen" value="{{id_origen}}">
+      <input id="cambio" class="w3-input" type="text" name="destino" value="{{id_destino}}">
+      <input id="cambio" class="w3-input" type="text" name="fechaPartida" value="{{fecha_partida}}">
+      <input id="cambio" class="w3-input" type="text" name="fechaRegreso" value="{{fecha_regreso}}">
+      <input id="cambio" class="w3-input" type="text" name="codigoVuelo" value="{{numero_vuelo}}">
+    </form>
+    {{/vuelo}}
+
+  </div>
+</div>
+{{> footer}}

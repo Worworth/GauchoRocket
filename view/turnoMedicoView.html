@@ -1,0 +1,149 @@
+{{> header3}}
+<div class="w3-main gop">
+  <h3 class="titulomedico">TURNO MEDICO</h3>
+  <div class="text-center divneon">
+ 
+    <a href="#myModal" class="trigger-btn neon" data-toggle="modal">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>INICIAR REGISTRO MEDICO</a>
+  </div>   
+  <div id="myModal" class="modal fade">
+    <div class="modal-dialog modal-login">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Registrar turno Medico</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        </div>
+            <div class="modal-body">
+              <h3 id="titulochequeo">Elija fecha y centro medico que desea:</h3>
+              <form action="/TurnoMedico/registrarTurno" method="post">
+                <div class="form-group">
+                  {{#nombre}}
+                  <input type="text" class="form-control formReserva" id="name" name="name" value="{{nombre}}"readonly>
+                  {{/nombre}}
+                </div>
+                  <label for="fechaTurno" class="w3-text-black"><b>Fecha</b></label>
+                    <div class="form-group">
+                      <input type="date" class="form-control" id="start" name="fechaTurno"
+                      value="2021-10-24"
+                      min="2021-10-24" max="2022-01-31" required>
+                    </div>
+                <div class="form-group">
+                  <label for="country">Seleccionar Centro médico disponible</label>
+                  <select class="form-control" id="country" name="country">
+                    <option value="" disabled selected>Elige una opcion</option>
+                    <option value="1001">Buenos Aires</option>
+                    <option value="1002">Ankara</option>
+                    <option value="1003">Shanghái</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-block btn-lg">Confirmar Turno</button>
+                </div>
+              </form>
+            </div>
+        <div class="modal-footer">Este registro enviara a su correo electronico un <b>Código de viajero.</b></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-row-padding w3-center w3-margin-top ">
+    <h3><b>Informacion de nuestro centros medicos</b></h3>
+  </div>
+  <div class="w3-center w3-margin-top cartas">
+    <div class="w3-third blurb">
+      <div class=" w3-container buenosaires" >
+        <h3> Buenos Aires</h3><br>
+          <i class="fa fa-desktop w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+          <br>
+          <div class="w3-tag w3-round w3-green" style="padding:3px">
+            <div class="w3-tag w3-round w3-blue w3-border w3-border-white">
+              {{#turno_diario}}
+              <span class="w3-tag w3-jumbo w3-blue w3-xlarge">{{turnoDiario}}</span>
+              {{/turno_diario}}
+              <p> Turnos para hoy</p>
+            </div>
+          </div>
+          <br><br>
+          <span class="w3-tag w3-padding w3-round-large w3-red w3-center piplu">
+            LIMITE DE TURNOS<br>
+            300<br>
+              DIARIOS
+            </span>
+      </div>
+    </div>
+    <div class="w3-third blura">
+      <div class=" w3-container ankara" >
+        <h3>Ankara</h3><br>
+          <i class="fa fa-css3 w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+          <br>
+          
+          <div class="w3-tag w3-round w3-green" style="padding:3px">
+            <div class="w3-tag w3-round w3-blue w3-border w3-border-white">
+              {{#turno_ankara}}
+              <span class="w3-tag w3-jumbo w3-blue w3-xlarge">{{turnoDiario}}</span>
+              {{/turno_ankara}}
+              <p> Turnos para hoy</p>
+            </div>
+          </div>
+          <br><br>
+          <span class="w3-tag w3-padding w3-round-large w3-red w3-center">
+            LIMITE DE TURNOS<br>
+            200<br>
+              DIARIOS
+            </span>
+      </div>
+    </div>
+    <div class="w3-third blurs">
+      <div class=" w3-container shanghai">
+        <h3>Shanghái</h3><br>
+          <i class="fa fa-diamond w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+          <br>
+          
+          <div class="w3-tag w3-round w3-green" style="padding:3px">
+            <div class="w3-tag w3-round w3-blue w3-border w3-border-white">
+              {{#turno_Shanghai}}
+              <span class="w3-tag w3-jumbo w3-blue w3-xlarge">{{turnoDiario}}</span>
+              {{/turno_Shanghai}}
+              <p> Turnos para hoy</p>
+            </div>
+          </div>
+          <br><br>
+          <span class="w3-tag w3-padding w3-round-large w3-red w3-center">
+            LIMITE DE TURNOS<br>
+            210<br>
+              DIARIOS
+            </span>
+      </div>
+    </div>
+  </div>
+    {{#tipo_role}}
+    <div class="w3-container">
+      <hr>
+      <div class="modal-header">
+        <h4 class="modal-title">Lista de turnos Medico</h4>
+      </div>
+      <div class="w3-row w3-padding-32">
+        <table class="w3-table">
+          <tr>
+            <th>nombre</th>
+            <th>apellido</th>
+            <th>Resultado</th>
+            <th>Centro Medico</th>
+          </tr>
+          {{#turno_medico}}
+          <tr>
+            <td>{{nombre}}</td>
+            <td>{{apellido}}</td>
+            <td><a href="/TurnoMedico/getDetail?id={{id}}">{{resultado}}</a></td>
+            <td>{{descripcion}}</td>
+          </tr>
+          {{/turno_medico}}
+        </table>
+      </div>
+    </div>	
+    {{/tipo_role}}
+</div>
+{{> footer}}

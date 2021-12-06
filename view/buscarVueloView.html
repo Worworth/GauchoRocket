@@ -1,0 +1,41 @@
+{{> header3}}
+<div class="w3-container w3-grey lkj">
+  <h2>Buscar</h2>
+
+</div>
+
+<div class="w3-content">
+
+  <div class="w3-container w3-margin-top lkjh">
+    <form action="/buscarVuelo/procesarVuelo" method="post">
+
+
+      <label for="origen">Origen</label>
+      <select id="origen" name="origen">
+        <option value="1">Buenos Aires</option>
+        <option value="2">Ankara</option>
+      </select>
+
+      <label for="destino">Destino</label>
+      <select id="destino" name="destino">
+        <option value="1">Estación Espacial Internacional</option>
+        <option value="2">OrbiterHotel</option>
+        <option value="3">Luna</option>
+        <option value="4">Marte</option>
+        <option value="5">Ganimedes</option>
+        <option value="6">Europa</option>
+        <option value="7">Io</option>
+        <option value="8">Encedalo</option>
+        <option value="9">Titán</option>
+      </select>
+
+      <label for="partida">Partida</label>
+      <input type="date" id="partida" name="partida" placeholder="DD MM YYYY">
+      <label for="regreso">Regreso</label>
+      <input type="date" id="regreso" name="regreso" placeholder="DD MM YYYY">
+      <input type="submit" value="Buscar">
+    </form>
+  </div>
+
+</div>
+{{> footer}}

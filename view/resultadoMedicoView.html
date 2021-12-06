@@ -1,0 +1,24 @@
+{{> header3}}
+<div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band2">
+    <h2 class="w3-wide">RESULTADO MEDICO</h2>
+    <div>
+        <table class="w3-table w3-padding-32">
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Resultado</th>
+                <th style="text-align: center;">Centro Medico</th>
+            </tr>
+            {{#turno_medico}}
+            <tr>
+                <td>{{nombre}} </td>
+                <td>{{apellido}} </td>
+                <td>{{resultado}}</td>
+                <td>{{descripcion}} </td>
+            </tr>
+            {{/turno_medico}}
+        </table>
+            <p><input type="submit" class="w3-button w3-green w3-margin-top" onclick="history.back()" value="Volver a atras" name="guardar"></p>
+    </div>
+</div>
+{{> footer}}

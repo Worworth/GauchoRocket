@@ -1,0 +1,35 @@
+{{> header}}
+<main id="band">
+	<div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" >
+		<div class="container">
+			<div class="img">
+				<div class="login-content">
+					<form action="/validar/controlarSesion" method="POST">
+						<h2 class="title">Iniciar Sesion</h2>
+						<div class="input-div one">
+							<div class="i">
+								<i class="fas fa-user"></i>
+							</div>
+							<div class="div">
+								<input type="text" id="usuario" name="usuario" placeholder="Email" required>
+							</div>
+						</div>
+						<div class="input-div pass">
+							<div class="i">
+								<i class="fas fa-lock"></i>
+							</div>
+							<div class="div">
+								<input type="password" id="password" name="password" placeholder="Password" required>
+							</div>
+						</div>
+						<label>
+							<input type="checkbox" checked="checked" style="margin-bottom:15px"> Remember me
+						</label>
+						<p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+						<input type="submit" class="w3-bar-item w3-button w3-green" value="Login" name="guardar">
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>		
