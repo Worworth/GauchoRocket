@@ -1,0 +1,678 @@
+
+/**/
+/* @font-face kit by Fonts2u (https://fonts2u.com) */
+ @font-face {
+   font-family:"space invaders Regular";
+   src:url("space_invaders.eot?")
+    format("eot"),url("space_invaders.woff") 
+    format("woff"),url("space_invaders.ttf") 
+    format("truetype"),url("space_invaders.svg#Space-Invaders")
+    format("svg");
+    
+}
+
+@font-face {
+  font-family: "neon";
+  src: url("NEONLEDLight.otf");
+ 
+
+}
+@font-face {
+  font-family: 'Alien Encounters';
+  src: url('AlienEncounters.eot');
+  src: url('AlienEncounters.eot?#iefix') format('embedded-opentype'),
+      url('AlienEncounters.woff2') format('woff2'),
+      url('AlienEncounters.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Earth Orbiter';
+  src: url('EarthOrbiter.eot');
+  src: url('EarthOrbiter.eot?#iefix') format('embedded-opentype'),
+      url('EarthOrbiter.woff2') format('woff2'),
+      url('EarthOrbiter.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Earth Orbiter Laser';
+  src: url('EarthOrbiterLaser.eot');
+  src: url('EarthOrbiterLaser.eot?#iefix') format('embedded-opentype'),
+      url('EarthOrbiterLaser.woff2') format('woff2'),
+      url('EarthOrbiterLaser.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Earth Orbiter Gradient';
+  src: url('EarthOrbiterGradient.eot');
+  src: url('EarthOrbiterGradient.eot?#iefix') format('embedded-opentype'),
+      url('EarthOrbiterGradient.woff2') format('woff2'),
+      url('EarthOrbiterGradient.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  
+}
+::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+  
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #2196f3; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+ background-color: yellow;
+ 
+}
+.w3-bar-block .w3-bar-item {
+
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+
+}
+/* Dropdown Button */
+.dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  width:250px;
+}
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+input[type=text], select  {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+input[type=date]{
+  
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+#cambio{
+  visibility: hidden;
+}
+.formReserva{
+  visibility: hidden;
+}
+.botonReserva{
+  margin-left: 45%;
+}
+#titulochequeo{
+  text-align:center;
+}
+#band{
+  margin-left:10%;
+  max-width:800px; 
+  background-color: rgba(255,255,255, 0.8);
+}
+#cancelarReserva {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 40%;
+  top: 10%;
+  width: 500px; 
+  height: 400px; 
+  overflow: auto; 
+  background-color: #c2c2c2;
+  padding: 50px;
+}
+.cancelbtn {
+  padding: 12px 15px;
+  
+  border: none;
+  border-radius: 4px;
+}
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 45%;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.formPago{
+  margin-left:25px;
+}
+.pipi:active{
+  background-color: teal;
+}
+.w3-sidebar{
+  z-index:3;
+  width:200px;
+  background-color: black;
+  color: darkblue;
+  
+}
+.w3-sidebar video{
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  object-fit: cover;
+  z-index: -1;
+}
+
+#myDIV{
+  margin-top: 20px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 75px;
+  flex-direction:column;
+  color: white;
+}
+#myDIV button{
+  width: 200px;
+  height: 50px;
+  border-radius: 20px;
+  
+}
+
+.btn {
+  outline: none;
+  background: transparent;
+  margin-top: 10px;
+  
+}
+.neon2{
+  position: relative;
+  display: inline-block;
+  letter-spacing: 4px;
+  text-decoration: none;
+  overflow: hidden;
+  transition: 0.2s;
+  
+}
+.neon2:hover {
+  
+  transition-delay: 1s;
+  -moz-box-shadow: -2px -1px 42px #fa96fd;
+  -webkit-box-shadow: -2px -1px 42px #fa96fd;
+  box-shadow: -2px -1px 42px #fa96fd;
+  border-radius: 20px;
+ 
+  
+}
+.neon2 span {
+  position: absolute;
+  display: block;
+  
+}
+.neon2 span:after {
+  position: absolute;
+  display: block;
+  
+}
+.neon2 span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(60deg, yellow, orange, red, purple, blue, teal, green, lightgreen);
+}
+.neon2:hover span:nth-child(1) {
+  left: 100%;
+  transition: 1s;
+}
+.neon2 span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background:  linear-gradient(60deg, yellow, orange, red, purple, blue, teal, green, lightgreen);
+}
+.neon2:hover span:nth-child(3) {
+  right: 100%;
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+.neon2 span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(60deg, yellow, orange, red, purple, blue, teal, green, lightgreen);
+}
+.neon2:hover span:nth-child(2) {
+  top: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+.neon2 span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(60deg, yellow, orange, red, purple, blue, teal, green, lightgreen);
+}
+.neon2:hover span:nth-child(4) {
+  bottom: 100%;
+  transition: 1s;
+  transition-delay: 0.75s;
+}
+
+#mySidebar{
+  height: 10vh;
+  width: 100vw;
+}
+#mySidebar2 h3{
+  width: auto;
+  text-align: center;
+  color: white;
+}
+#mySidebar p{
+  position: relative;
+  color: white;
+  margin-top: 25px;
+  margin-left: 220px;
+ 
+}
+#mySidebar a{
+  margin:10px;
+  width:auto;
+}
+#mySidebar video{
+  width: 100%;
+  height: 10vh;
+  position: absolute;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/*Turno Medico*/
+.titulomedico{
+  padding-top: 2.5%;
+  text-align: center;
+}
+.divneon{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 75px;
+  background: #031321;
+  font-family: consolas;
+}
+.neon{
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  color: #2196f3;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-decoration: none;
+  font-size: 16px;
+  overflow: hidden;
+  transition: 0.2s;
+
+}
+.neon:hover {
+  color: #255784;
+  background: #2196f3;
+  box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+  transition-delay: 1s;
+}
+.neon span {
+  position: absolute;
+  display: block;
+  
+}
+.neon span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #2196f3);
+}
+.neon:hover span:nth-child(1) {
+  left: 100%;
+  transition: 1s;
+}
+.neon span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #2196f3);
+}
+.neon:hover span:nth-child(3) {
+  right: 100%;
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+.neon span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #2196f3);
+}
+.neon:hover span:nth-child(2) {
+  top: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+.neon span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, rgb(33, 150, 243));
+}
+.neon:hover span:nth-child(4) {
+  bottom: 100%;
+  transition: 1s;
+  transition-delay: 0.75s;
+}
+#myModal{
+  color: black;
+  text-align: left;
+}
+.blurb{
+  background-image: url("/public/buenoaires.jpg");
+  min-height:420px;
+  width:30%;
+  background-size: cover;
+  border-radius: 20PX;
+  background-repeat: no-repeat;
+  filter: brightness(85%);
+  margin-bottom: 40px;
+}
+.blura{
+  background-image: url("/public/Ankara.jpg");
+  min-height:420px; 
+  width:30%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 20PX;
+  margin-bottom: 40px;
+}
+.blurs{
+  background-image: url("/public/shangai2.jpg");
+  min-height:420px;
+  width:30%;
+  background-size: cover;
+  border-radius: 20PX;
+  filter: brightness(125%);
+  background-repeat: no-repeat;
+  margin-bottom: 40px;
+}
+.buenosaires{
+  background: linear-gradient(135deg, rgba(255, 255,255, 0.1), rgba(255, 255, 255, 0)); 
+  backdrop-filter: blur(5PX);
+  -webkit-backdrop-filter: blur(5PX); 
+  border-radius: 20PX;
+  border:1PX solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8PX 32PX 0 rgba(252, 252, 252, 0.37);
+  
+  
+}
+.ankara{
+  background: linear-gradient(135deg, rgba(255, 255,255, 0.1), rgba(255, 255, 255, 0)); 
+  backdrop-filter: blur(5PX);
+  -webkit-backdrop-filter: blur(5PX); 
+  border-radius: 20PX;
+  border:1PX solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8PX 32PX 0 rgba(252, 252, 252, 0.37);
+ 
+  
+}
+.shanghai{
+  background: linear-gradient(135deg, rgba(255, 255,255, 0.1), rgba(255, 255, 255, 0)); 
+  backdrop-filter: blur(5PX);
+  -webkit-backdrop-filter: blur(5PX); 
+  border-radius: 20PX;
+  border:1PX solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8PX 32PX 0 rgba(252, 252, 252, 0.37);
+  
+}
+
+.gop{
+  background: #031321;
+  margin-left:200px;
+  color: white;
+  text-align: center;
+  height: 150%;
+  margin-top: -1.5%;
+
+}
+.cartas{
+  width: 85vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  
+}
+/*Resultado turnos medicos*/
+#band2{
+  width: 100%;
+  margin-left: 200px;
+}
+#band2  table td {
+  border:1px solid black;
+  
+}
+
+#band2 table th{
+  border:1px solid black;
+} 
+/*Vuelos*/
+.vuelostitulo{
+  text-align: center;
+  background-color: grey;
+}
+.vuelos{
+  margin-left: 200px;
+  background-color: #031321;
+  height: 100%;
+}
+.divtabla{
+  background-color: rgb(151, 150, 150);
+  overflow-x: auto;
+  border:double 13px rgb(151, 150, 150);
+  -moz-border-radius: 44px;
+  -webkit-border-radius: 44px;
+  border-radius: 44px;
+  -moz-box-shadow: -5px -5px 75px #ffffff;
+  -webkit-box-shadow: -5px -5px 75px #ffffff;
+  box-shadow: -5px -5px 75px #ffffff;
+}
+.divtabla table tr th{
+ background-color: black;
+ color: yellow;
+ font-weight:normal;
+  font-style:normal;
+  font-family:"space invaders Regular";
+}
+
+.divtabla table tr td{
+  background-color: black;
+  color: #39ff14;
+  font-weight:normal;
+   font-style:normal;
+   font-family:"space invaders Regular";
+}
+.lop{
+  margin-top:64px;
+  color: #ffffff;
+ 
+}
+.lop div ul{
+   border: 2px solid #2196f3;
+   -moz-box-shadow: -5px -5px 75px #18beff;
+  -webkit-box-shadow: -5px -5px 75px #18beff;
+  box-shadow: -5px -5px 75px #18beff;
+}
+.lop div ul a{
+  color: #ffffff;
+}
+.lop div ul a:hover{
+  color: #000000;
+}
+
+/*Reserva*/
+.tituloreserva{
+  font-family: 'neon';
+  text-shadow:-1px -2px 19px #ffffff;
+}
+.reserva{
+  overflow-x: auto;
+  margin-top: 50px;
+  background-color:#2196f3;
+  border:double 13px #2196f3;
+  -moz-border-radius: 44px;
+  -webkit-border-radius: 44px;
+  border-radius: 44px;
+  -moz-box-shadow: -5px -5px 75px #18beff;
+  -webkit-box-shadow: -5px -5px 75px #18beff;
+  box-shadow: -5px -5px 75px #18beff;
+  
+}
+
+table.tablareserva tr th{
+
+  font-family: 'Alien Encounters';
+  color:white;
+  text-shadow:-1px -2px 75px #18beff;
+  background-color: #255784;
+}
+table.tablareserva tr td{
+  
+  font-family: 'Earth Orbiter Gradient';
+  color: white;
+  background-color: #255784;
+ 
+}
+/*Detalle reserva*/
+.po{
+  margin-left: 200px;
+  background: #031321;
+  text-align: center;
+  height: 100%;
+ 
+}
+.po h2, h4, b,p, label{
+  color:white;
+}
+.w3-tag{
+  background-color: #18beff;
+  color: white;
+}
+.fechadetalle{
+  color:#18beff;
+}
+.plo{
+  width: 20%;
+  
+}
+.plo2{
+  margin-left: 25%;
+}
+.poi p{
+  color: #000000;
+}
+/*buscar vuelo*/
+.lkj h2{
+  text-align: center;
+  color: #000000;
+}
+.lkjh label{
+  color: #000000;
+}
+/*reportes*/
+.reportes{
+  margin-left: 210px;
+}
